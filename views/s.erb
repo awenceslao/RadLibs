@@ -1,0 +1,38 @@
+<%
+@file = "output/" + @name_of_story + ".txt"
+f = File.open(@file, "r")
+  @string = f.read
+f.close
+
+noun_arr = @string.split("[noun]")
+verb_arr = @string.split("[verb]")
+adjective_arr = @string.split("[adj]")
+
+num_of_noun = noun_arr.size - 1 
+num_of_verb = verb_arr.size - 1
+num_of_adj = adjective_arr.size - 1
+%>
+
+<form action="/<%=@name_of_story%>" method="post">
+  <%for i in 1..num_of_noun%>
+   Enter a noun: <input type="text" name="noun_arr[]">
+   <%end%>
+
+  <%for i in 1..num_of_verb%>
+   Enter a verb: <input type="text" name="verb_arr[]">
+   <%end%>
+
+  <%for i in 1..num_of_adj%>
+   Enter an adjective: <input type="text" name="adjective_arr[]">
+   <%end%>
+
+  <input type="submit">
+</form>
+
+<br>
+Mad Lib: 
+<br>
+
+<%=@string%>
+
+
