@@ -1,0 +1,19 @@
+<%
+s_arr = Dir.entries("output/")
+s_arr.shift(2)
+%>
+
+<html>
+  <head>
+    <h1>Rad Libs</h1>
+  </head>
+  <body>
+    <h2>Welcome to Rad Libs</h2>
+    <h3>Pick a story</h3>
+    <%s_arr.each{|file|
+      entry = file.chomp(".txt")%>
+      <a href="/<%=entry%>"><li> <%=entry%> </li></a>
+      <%}
+      %>
+  </body>
+</html>
