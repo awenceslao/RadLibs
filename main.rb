@@ -29,6 +29,7 @@ post "/upload" do
   File.open("uploads/" + params["myfile"][:filename], "w") do |f|
     f.write(params["myfile"][:tempfile].read)
   end
+  erb :h
 end
 
 not_found do
