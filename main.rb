@@ -4,6 +4,10 @@ get "/" do
   erb :h
 end
 
+get "/upload" do
+  erb :upload
+end
+
 get "/:story" do
   @name_of_story = params["story"]
   erb :s
@@ -19,6 +23,12 @@ post "/:story" do
   @verb = params["verb_arr"]
   @adjective = params["adjective_arr"]
   erb :out
+end
+
+post "/upload" do
+  File.open("uploads/" + params["myfile"][:filename], "w") do |f|
+    f.write(params["myfile"][:tempfile].read)
+  end
 end
 
 not_found do
