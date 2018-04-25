@@ -15,15 +15,15 @@ num_of_adj = adjective_arr.size - 1
 
 <form action="/<%=@name_of_story%>" method="post">
   <%for i in 1..num_of_noun%>
-   Enter a noun: <input type="text" name="noun_arr[]">
+   Enter a noun: <input type="text" name="noun_arr[]" class="nouns"><br>
    <%end%>
 
   <%for i in 1..num_of_verb%>
-   Enter a verb: <input type="text" name="verb_arr[]">
+   Enter a verb: <input type="text" name="verb_arr[]" class="verbs"><br>
    <%end%>
 
   <%for i in 1..num_of_adj%>
-   Enter an adjective: <input type="text" name="adjective_arr[]">
+   Enter an adjective: <input type="text" name="adjective_arr[]" class="adjectives"><br>
    <%end%>
 
   <input type="submit">
@@ -35,4 +35,4 @@ Mad Lib:
 
 <%=@string%>
 
-
+<link href="Stylesheet.css" type = "text/css" rel="stylesheet">

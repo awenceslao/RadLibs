@@ -7,15 +7,15 @@ f.close
 for i in 1..@noun.size
   @string.sub!("[noun]", @noun[i-1].to_s)
 end
-
+%><br><%
 for j in 1..@verb.size
   @string.sub!("[verb]", @verb[j-1].to_s)
 end
-
+%><br><%
 for k in 1..@adjective.size
   @string.sub!("[adj]", @adjective[k-1].to_s)
 end
-
+%><br><%
 %>
 
 <h2> Your Rad Lib </h2>
@@ -23,4 +23,5 @@ end
 <%=@string%>
 
 
+ <link href="Stylesheet.css" type = "text/css" rel="stylesheet">
 

@@ -1,0 +1,26 @@
+html{
+    font-family: "Helvetica", sans-serif;
+    text-align: ceneter;
+}
+
+body {
+    background: #A9A9A9;
+}
+
+h1,h2,h3 {
+    text-align: center
+}
+
+li{
+    list-style-type: square;
+    margin-left: 1in
+}
+
+.nouns{
+    margin-left: 35px
+}
+
+.verbs{
+    margin-left: 39px
+}
+

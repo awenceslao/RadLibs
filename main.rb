@@ -14,7 +14,7 @@ get "/:story" do
 end
 
 get "/output" do
-  erb :output
+  erb :out
 end
 
 post "/:story" do
@@ -22,7 +22,7 @@ post "/:story" do
   @noun = params["noun_arr"]
   @verb = params["verb_arr"]
   @adjective = params["adjective_arr"]
-  erb :output
+  erb :out
 end
 
 post "/upload" do
